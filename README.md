@@ -15,9 +15,8 @@ weblocalstore组件描述
   var weblocalstore = require('weblocalstore');
   
   //本地存储indexedDB
-  var indexedDbopt = weblocalstore.indexedDB
-  (
-    "myimVal",            //数据库名
+  var indexedDbopt = weblocalstore.indexedDB(
+    "databaseName",       //数据库名
     1,                    //数据库版本号
     [{                    //数据库建表
       name:'teblename',   //表名
@@ -43,5 +42,93 @@ weblocalstore组件描述
       key,                  //行数据对应key值
       function(data){}      //获取数据成功回调(数据通过data传递)    
    );
+   
+   //获取表内所有数据
+   indexedDbopt.getAllData(
+      tablename,            //参数一：表名
+      function(data){}      //获取数据成功回调(数据通过data逐个传递)    
+   );
+   
+   //删除表内指定数据
+   indexedDbopt.deleteDataByKey(
+      tablename,            //参数一：表名
+      key                   //行数据对应key值
+   );
+   
+   //清空表数据
+   indexedDbopt.clearObjectStore(
+      tablename             //参数一：表名
+   );
+   
+   //关闭数据库
+   indexedDbopt.closeDatabase();
+   
+   //删除数据库
+   indexedDbopt.delDB(
+      databaseName          //参数一：数据库名
+   );
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 ```
