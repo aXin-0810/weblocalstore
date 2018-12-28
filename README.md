@@ -14,7 +14,9 @@ weblocalstore组件描述
   OR
   var weblocalstore = require('weblocalstore');
   
-  //本地存储indexedDB
+  
+  ######################### 本地存储indexedDB ##########################
+  
   var indexedDbopt = weblocalstore.indexedDB(
     "databaseName",       //数据库名
     1,                    //数据库版本号
