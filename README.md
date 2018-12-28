@@ -132,65 +132,26 @@ weblocalstore组件描述
       }
     };
     
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+    
+    ######################### 本地存储cookie ##########################
+    
+    var cookieopt = weblocalstore.cookie;
+    
+    //设置cookie存储
+    cookieopt.setCookie(
+        name,                   //参数一:key
+        value,                  //参数二:存储数据（字符类型）
+        seconds                 //参数三:存储时间（秒为单位）
+    );
+     
+    //获取cookie数据
+    cookieopt.getCookie(
+        name,                   //参数一:key
+    );
+    
+    //删除cookie数据
+    cookieopt.delCookie(
+        name,                   //参数一:key
+    );
 
 ```
