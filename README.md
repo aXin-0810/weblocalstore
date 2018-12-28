@@ -71,7 +71,67 @@ weblocalstore组件描述
    );
    
    
+   ######################### 本地存储webSql ##########################
    
+   var webSqlopt = weblocalstore.webSql({
+      name:'数据库名',
+      size:'数据库大小',
+      version:'数据库版本号',
+      describe:'数据库描述',
+   });
+   
+   //创建数据库表
+   webSqlopt.createForm(obj={
+      name:'数据表名',
+      key:'表主键名(非必要数据)',
+      titleArr:'表列名数组',
+      success:function(){},       //创建成功回调
+   });
+   
+   //插入新数据
+   webSqlopt.addVal(obj={
+      name:'数据表名',
+      titleArr:'对应表列名数组',
+      valArr:'对应数据数组',
+      success:function(){},       //插入成功回调
+   });
+   
+   //更新数据
+   webSqlopt.update(obj={
+      name:'数据表名',
+      replaceArr:[{
+        column:'表列名',
+        val:'列对应数据'
+      }],
+      conditions:'条件语句',       //条件数据格式下方有详细描述
+      success:function(){},       //更新成功回调
+   });
+   
+   //读取数据
+   webSqlopt.readVal(obj={
+      name:'数据表名',
+      columnArr:'列名数组',        //非必填,不填的话获取整行数据
+      conditions:'条件语句',       //条件数据格式下方有详细描述
+      success:function(data){},   //获取成功回调，数据通过data传递
+   });
+   
+   //删除数据库表
+   webSqlopt.delVal(obj={
+      name:'数据表名',
+      conditions:'条件语句',       //条件数据格式下方有详细描述
+      success:function(){},       //删除成功回调
+   });
+   
+   //条件数据格式描述
+   conditions:{
+      type:'',                     //type类型分别为AND(与),OR(或)
+      corres:{
+        id:'1',                    //条件值(id=1)  
+        id_:[0,3],                 //条件值(id_>0 , id_<3)。备注：大于和小于根据数组值顺序来定，列：id_:[3,0]。表示(id_>3 , id_<0)
+        id__:'!='+3                //条件值(id__!=3)
+      }
+    };
+    
    
    
    
