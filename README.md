@@ -1,7 +1,7 @@
-acrosspass
+weblocalstore
 ===
 
-acrosspass组件描述
+weblocalstore组件描述
 
 实现web页面与页面之间的跨域传递数据
 
