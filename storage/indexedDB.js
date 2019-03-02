@@ -157,13 +157,3 @@ function indexedDBopt(name , version , buildTable){
 };
 
 module.exports = indexedDBopt;
-
-// 创建indexedDB本地存储数据表
-// window.indexedDBopt = indexedDBoptFun
-// ("myimVal",1,[
-// 	{name:'userData',keyPath:'type'},						//用户信息
-// 	{name:'userList',keyPath:'id'},							//好友列表
-// 	{name:'userValList',keyPath:'id'},					//已读消息数据
-// 	{name:'unreadMessages',keyPath:'id'},				//未读消息数据
-// 	{name:'recentSession',keyPath:'id'}					//微信最近会话排序
-// ]);
